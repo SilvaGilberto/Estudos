@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercicio 003</title>
+
+        <style>
+            div {
+                max-width: 500px;
+                width: 100%;
+                padding: 50px;
+                margin: auto;
+                text-align: center;
+                color: white;
+                background-color: #555;
+            }
+
+            h1 {
+                padding-bottom: 30px;
+            }
+
+            a {
+                padding: 10px 30px;
+                text-decoration: none;
+                font: 25px arial;
+                color: white;
+                background-color: #333;
+                border-radius: 10px;
+            }
+
+            a:hover {
+                background-color: #444;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div>
+            <h1>Interação com um botão</h1>
+            <a href="#" onclick="inicio()">Clique para começar</a>
+        </div>
+
+        <script>
+            function inicio() {
+                let nome = window.prompt('Qual é o seu nome? ');
+                window.alert(`Olá, ${nome}! É um prazer te conhecer!`);
+            };
+        </script>
+
+    </body>
+</html>
