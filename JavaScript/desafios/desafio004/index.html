@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Desafio 004</title>
+    </head>
+    <body>
+        
+        <h1>Calculando Troco</h1>
+        <button onclick="action()">Comprar produto</button>
+
+        <script>
+            function action(){
+                let produto = window.prompt("Qual produto você esta comprando?");
+                let valor = Number.parseFloat(window.prompt(`Quanto custa o ${produto} que você esta comprando?`));
+                let dpago = Number.parseFloat(window.prompt(`Qual foi o valor que você deu para pagar o ${produto}? `));
+                let troco = dpago - valor;
+                document.write(`Você comprou um ${produto} que custou R$ ${valor}. <BR/> Deu R$ ${dpago} em dinheiro e vai receber ${troco} de troco. <br/> Volte sempre !!`);
+            };
+        </script>
+
+    </body>
+</html>
