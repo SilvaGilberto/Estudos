@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 005</title>
+</head>
+<body>
+    
+    <h1>Conversor de Medidas</h1>
+    <button onclick="converter()">Converter</button>
+    <section id="resultado">
+        <p></p>
+    </section>
+
+    <script>
+
+        function converter() {
+            let valor = window.prompt('Qual o valor em metros ?');
+            let res = window.document.getElementById('resultado');
+
+            res.innerHTML = `<p>A distância de ${valor} metros, corresponde a... <hr/></p>`;
+            res.innerHTML += `<p>${valor / 1000} quilômetros (Km)</p>`;
+            res.innerHTML += `<p>${valor / 100} hectômetros (Hm)</p>`;
+            res.innerHTML += `<p>${valor / 10} decâmetros (Dam)</p>`;
+            res.innerHTML += `<p>${valor * 10} decimetros (Dm)</p>`;
+            res.innerHTML += `<p>${valor * 100} centimetros (Cm)</p>`;
+            res.innerHTML += `<p>${valor * 1000} milimetros (mm)</p>`;
+
+        };
+
+    </script>
+
+</body>
+</html>

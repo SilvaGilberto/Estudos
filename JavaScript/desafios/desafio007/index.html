@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 007</title>
+</head>
+<body>
+    
+    <h1>Conversor R$ para US$</h1>
+    <button onclick="converter()">Converter</button>
+    <section id="resultado">
+        <p>Clique no botão acima para iniciar.</p>
+    </section>
+
+    <script>
+
+        let cotacao = Number(window.prompt('Antes de mais nada, quanto esta a cotação do dolar hoje?'));
+
+        function converter() {
+            let valor = Number(window.prompt('Qual o valor desejado: '));
+            let conversao = valor / cotacao;
+            let res = window.document.getElementById('resultado');
+            res.innerHTML = `<p>O valor em dollar é igual a ${conversao}U$.</p>`;
+        };
+
+    </script>
+</body>
+</html>
