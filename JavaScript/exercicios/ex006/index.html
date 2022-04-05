@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercicio 006</title>
+    </head>
+    <body>
+        
+        <h1>Somando dois números inteiros</h1>
+        <button onclick="action()">Insira os numeros</button>
+        <p id="resultado"></p>
+
+        <script>
+
+            function action() {
+                let num1 = Number.parseInt(window.prompt('Digite o primeiro valor: '));
+                let num2 = Number.parseInt(window.prompt('Digite o segundo valor: '));
+                let soma = num1 + num2;
+                let res = window.document.getElementById('resultado');
+                res.innerHTML = `O resultado entre a soma dos valores inseridos é igual a ${soma}.`;
+            };
+
+        </script>
+    </body>
+</html>

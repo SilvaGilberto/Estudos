@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercicio 005</title>
+
+        <style>
+
+            main {
+                margin: auto;
+                padding: 30px;
+                max-width: 500px;
+                width: 100%;
+                text-align: center;
+                color: white;
+                background-color: darkslateblue;
+                border-radius: 5px;
+            }
+
+            a {
+                display: inline-block;
+                margin-bottom: 20px;
+                padding: 20px;
+                text-decoration: none;
+                color: white;
+                background-color: #555;
+            }
+
+            a:hover {
+                background-color: #666;
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        <main>
+            <h1>Calculando o dobro e a metade</h1>
+            <a href="#" onclick="action()">Clique para calcular</a>
+            <section id="resultado">
+                <p>O resultado vem aqui...</p>
+            </section>
+        </main>
+
+        <script>
+
+            window.alert('Ao clicar no botão vc ira inserir o valor desejado');
+            function action() {
+                let valor = Number.parseFloat(window.prompt('Digite um número: '));
+                let dobro = valor * 2;
+                let metade = valor / 2;
+                let res = window.document.getElementById('resultado');
+                res.innerHTML = `<p>O dobro de ${valor} é igual a ${dobro}. <br/> A metade de ${valor} é igual a ${metade}.</p>`;
+            };
+
+        </script>
+
+    </body>
+</html>

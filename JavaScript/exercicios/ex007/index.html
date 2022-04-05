@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 007</title>
+
+    <style>
+        main {
+            margin: auto;
+            padding: 30px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            background-color: burlywood;
+            border-radius: 5px;
+        }
+        a {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #555;
+        }
+        a:hover {
+            background-color: #666;
+        }
+        p {
+            padding: 10px;
+            color: black;
+            background-color: white;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    
+    <main>
+        <h1>Média do aluo v1.0</h1>
+        <a href="#" onclick="calcular()">Calcular média</a>
+        <section id="resultado">
+            <p>O resultado ira aparecer aqui...</p>
+        </section>
+    </main>
+
+    <script>
+
+        function calcular() {
+            let nome = window.prompt('Insira o nome do aluno: ');
+            let nota1 = Number.parseFloat(window.prompt('Nota do teste: '));
+            let nota2 = Number.parseFloat(window.prompt('Nota do prova: '));
+            let media = (nota1 + nota2) / 2;
+            let status = media >= 7.0 ? "aprovado" : "reprovado";
+            let res = window.document.getElementById('resultado');
+            res.innerHTML = `<p>Calculando as nota de ${nome}. <br/> A média de ${nome} é igual a ${media}; <br/> ${nome} foi ${status} !</p>`;
+        };
+
+    </script>
+</body>
+</html>
