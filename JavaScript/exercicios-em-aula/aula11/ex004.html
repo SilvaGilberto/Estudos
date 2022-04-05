@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        
+        <h1>Verificação</h1>
+        <input type="text" name="info" id="info">
+        <input type="button" onclick="conferir()" value="Conferir">
+        <div id="resultado"></div>
+
+        <script>
+            function conferir() {
+                let nacionalidade = window.document.getElementById('info');
+                let pais = (nacionalidade.value);
+                let res = window.document.getElementById('resultado');
+                res.innerHTML = `Vivendo em <strong>${nacionalidade}</strong>.`;
+                if (nacionalidade != 'Brasil') {
+                    res.innerHTML += `Você é <strong>Estrageiro</strong>.`;
+                } else {
+                    res.innerHTML += `Você é <strong>Brasileiro</strong>.`;
+                }
+            };
+        </script>
+
+    </body>
+</html>

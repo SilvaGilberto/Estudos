@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        
+        <h1>Radar</h1>
+        <h2>Velocidade permitida 60Km/h</h2>
+        <input type="text" name="info" id="info">
+        <input type="button" onclick="calcular()" value="Conferir">
+        <div id="resultado"></div>
+
+        <script>
+            function calcular() {
+                let valor = window.document.getElementById('info');
+                let velocidade = Number(valor.value);
+                let res = window.document.getElementById('resultado');
+                res.innerHTML = `<p>O seu veiculo esta a <strong>${velocidade}Km/h</strong>.</p>`;
+                if (velocidade > 60) {
+                    res.innerHTML += `Você ultrapassou a velocidade permitida, <strong>MULTADO!!</strong>`;
+                }
+                res.innerHTML += '<p>Dirija sempre com sinto de segurança.</p>';
+            };
+        </script>
+
+    </body>
+</html>
