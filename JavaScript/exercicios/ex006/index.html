@@ -5,21 +5,69 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Exercicio 006</title>
+
+        <style>
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            main {
+                margin-top: 30px;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            form {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            input, a {
+                margin: 10px;
+                height: 20px;
+            }
+
+            a {
+                display: inline-block;
+                padding: 0px 20px;
+                text-decoration: none;
+                color: white;
+                background-color: #555;
+            }
+
+        </style>
     </head>
     <body>
         
-        <h1>Somando dois números inteiros</h1>
-        <button onclick="action()">Insira os numeros</button>
-        <p id="resultado"></p>
+        <main>
+            <h1>Somando dois números inteiros</h1>
+            <form>
+                <input type="number" id="info1"> +
+                <input type="number" id="info2">
+                <a href="#" onclick="action()">=</a>
+                <section id="resultado">
+                    <input type="text" class="resultado">
+                </section>
+            </form>
+        </main>
 
         <script>
 
             function action() {
-                let num1 = Number.parseInt(window.prompt('Digite o primeiro valor: '));
-                let num2 = Number.parseInt(window.prompt('Digite o segundo valor: '));
+                let valor1 = window.document.getElementById('info1');
+                let valor2 = window.document.getElementById('info2');
+                let num1 = Number(valor1.value);
+                let num2 = Number(valor2.value);
                 let soma = num1 + num2;
+                
                 let res = window.document.getElementById('resultado');
-                res.innerHTML = `O resultado entre a soma dos valores inseridos é igual a ${soma}.`;
+                res.innerHTML = `<input type="text" value="${soma}">`;
             };
 
         </script>
