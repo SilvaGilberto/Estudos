@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Desafio 013</title>
+    </head>
+    <body>
+        <h1>Situação do aluno</h1>
+        <button onclick="verificar()">Entrar com as notas</button>
+        <section id="resultado">
+
+        </section>
+
+        <script>
+            function verificar() {
+                let nome = window.prompt('Qual o nome do aluno?')
+                let nota1 = Number(window.prompt(`Qual a primeira nota de ${nome}:`))
+                let nota2 = Number(window.prompt(`Qual a segunda nota de ${nome}:`))
+                let media = (nota1 + nota2) / 2
+                let res = document.getElementById('resultado')
+                res.innerHTML = `<h2>Analisando as notas de ${nome}.`
+                if (media > 6) {
+                    res.innerHTML += `<p>Com as notas ${nota1} e ${nota2} a sua <strong>média é ${media}</strong></p>`
+                    res.innerHTML += `<p>Com a média acima de 6,0 o aluno esta <mark style="padding:5px; background-color:green;">APROVADO</mark>`
+                } else if (media >= 3 && media < 6) {
+                    res.innerHTML += `<p>Com as notas ${nota1} e ${nota2} a sua <strong>média é ${media}</strong></p>`
+                    res.innerHTML += `<p>Com a média entre 3,0 e 6,0 o aluno esta em <mark style="padding:5px; background-color:white;">RECUPERAÇÃO</mark>`
+                } else {
+                    res.innerHTML += `<p>Com as notas ${nota1} e ${nota2} a sua <strong>média é ${media}</strong></p>`
+                    res.innerHTML += `<p>Com a média menor a 3,0 o aluno esta <mark style="padding:5px; background-color:red;">REPROVADO</mark>`
+                }
+            }
+        </script>
+    </body>
+</html>
