@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Distâncias e Scroll Suave</title>
+
+        <style>
+            .text {
+                width: 200px;
+                height: 200vh;
+                overflow: auto;
+                background-color: #ccc;
+            }
+            div#button {
+                display: none;
+                position: fixed;
+                bottom: 5px;
+                right: 5px;
+                cursor: pointer;
+                padding: 10px;
+                background-color: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt voluptate eaque cumque corrupti consequatur fugiat quis minus rerum autem laborum? Corrupti mollitia quasi, pariatur culpa modi at facilis recusandae nemo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur reprehenderit quae, voluptates exercitationem sunt fugit asperiores, adipisci ratione aliquam vero cum ex quaerat. Exercitationem consectetur beatae facilis sunt voluptatum commodi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatum et molestias illum debitis minima asperiores molestiae, vero aspernatur atque tenetur fugiat accusamus odit animi consequuntur earum. Vel, consequatur excepturi.
+        </div>
+        <div onclick="voltar()" id="button">Voltar para o topo</div>
+        <script>
+            function voltar() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                })
+            }
+
+            function decidirBotaoScroll() {
+                if (window.scrollY === 0) {
+                    document.getElementById('button').style.display = 'none'
+                } else {
+                    document.getElementById('button').style.display = 'block'
+                }
+            }
+
+            window.addEventListener('scroll', decidirBotaoScroll)
+        </script>
+    </body>
+</html>

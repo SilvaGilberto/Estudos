@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Manipulando atributos</title>
+
+        <style>
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            #img {
+                width: 400px;
+                height: 400px;
+            }
+            button {
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQDt76ounuVattFO0-x2Q_sasKsY2tp7widA&usqp=CAU" alt="animais" id="img">
+            <button onclick="trocarImg('https://mid.curitiba.pr.gov.br/2022/destaque/00341538.jpg')">Gato</button>
+            <button onclick="trocarImg('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Fl7vF0bGvJD4fOddJ-oOct9TEbxZsPBJzg&usqp=CAU')">Cachorro</button>
+        </div>
+
+        <script>
+            function trocarImg(fileName) {
+                document.getElementById('img').setAttribute('src', fileName)
+            }
+        </script>
+    </body>
+</html>
