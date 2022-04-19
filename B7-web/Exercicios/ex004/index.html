@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mudanças de Estilo</title>
+
+        <style>
+
+            section {
+                margin-bottom: 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .quadrado {
+                width: 300px;
+                height: 300px;
+                border: 1px solid black;
+            }
+
+            .botoes {
+                display: flex;
+            }
+
+            button {
+                margin-left: 10px;
+            }
+
+            .verde {
+                background-color: green;
+            }
+
+            .rosa {
+                background-color: pink;
+            }
+
+            .amarelo {
+                background-color: yellow;
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        <section>
+            <div class="quadrado" id="area"></div>
+            <p>Selecione uma cor para inserir no quadrado acima ( Usando o .style.background-color= ' '; )</p>
+            <div class="botoes">
+                <button onclick="mudarVermelho()">Vermelho</button>
+                <button onclick="mudarAzul()">Azul</button>
+                <button onclick="mudarPreto()">Preto</button>
+            </div>
+        </section>
+
+        <section>
+            <div class="quadrado" id="area2"></div>
+            <p>Selecione uma cor para inserir no quadrado acima ( usando classList.add(' ') )</p>
+            <div class="botoes">
+                <button onclick="mudarVerde()">Verde</button>
+                <button onclick="mudarAmarelo()">Amarelo</button>
+                <button onclick="mudarRosa()">Rosa</button>
+            </div>
+        </section>
+
+        <script>
+
+            function mudarVermelho() {
+                document.getElementById('area').style.backgroundColor= 'red'
+            }
+            function mudarAzul() {
+                document.getElementById('area').style.backgroundColor= 'blue'
+            }
+            function mudarPreto() {
+                document.getElementById('area').style.backgroundColor= 'black'
+            }
+
+
+            function mudarVerde() {
+                document.getElementById('area2').classList.remove('amarelo')
+                document.getElementById('area2').classList.remove('rosa')
+                document.getElementById('area2').classList.add('verde')
+            }
+            function mudarAmarelo() {
+                document.getElementById('area2').classList.remove('verde')
+                document.getElementById('area2').classList.remove('rosa')
+                document.getElementById('area2').classList.add('amarelo')
+            }
+            function mudarRosa() {
+                document.getElementById('area2').classList.remove('amarelo')
+                document.getElementById('area2').classList.remove('verde')
+                document.getElementById('area2').classList.add('rosa')
+            }
+
+        </script>
+    </body>
+</html>
