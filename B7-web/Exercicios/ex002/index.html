@@ -31,6 +31,7 @@
         <div onclick="voltar()" id="button">Voltar para o topo</div>
         
         <script>
+            //Para a barra de rolagem voltar para a posição 0, inicio 
             function voltar() {
                 window.scrollTo({
                     top: 0,
@@ -38,6 +39,7 @@
                 })
             }
 
+            //Para o botão de subir aparecer ou n 
             function decidirBotaoScroll() {
                 if (window.scrollY === 0) {
                     document.getElementById('button').style.display = 'none'

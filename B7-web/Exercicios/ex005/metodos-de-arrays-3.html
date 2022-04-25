@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos de Arrays</title>
+</head>
+<body>
+    
+    <div>
+        <h1>Adicionando valores a um Array</h1>
+        <input type="text" name="Itext" id="Itext">
+        <button onclick="adicionar()">Adicionar</button>
+        <button onclick="filtrar()">O pares</button> <br>
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        let item = document.getElementById('Itext')
+        let res = document.getElementById('resultado')
+        let array = []
+        let array2 = []
+
+        function adicionar() {
+            array.push(item.value)
+            res.innerHTML = `<p>O array esta composto por: ${array}<p>`
+        }
+
+        //esta função ira mapear o array e filtrar os intens que são testados na função, retornando apenas os verdadeiros 
+        function filtrar() {
+            array2 = array.filter(function (item) {
+                if (item % 2 === 0) {
+                    return true
+                } else {
+                    return false
+                }
+            })
+            res.innerHTML += `<p>Os números pares dentro deste array são: ${array2}</p>`
+        }
+    </script>
+</body>
+</html>
