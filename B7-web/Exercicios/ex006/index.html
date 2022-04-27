@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+</head>
+<body>
+
+    <div id="resultado" onload="relogio()"></div>
+    <button onclick="comecar()">Começar</button>
+    <button onclick="parar()">Parar</button>
+
+    <script>
+        let contador = '' 
+        
+        function comecar() {
+            contador = setInterval(relogio, 1000)
+        }
+
+        function parar() {
+            clearInterval(contador)
+        }
+
+        function relogio() {
+            let data = new Date()
+            let horas = data.getHours()
+            let minutos = data.getMinutes()
+            let segundos = data.getSeconds()
+            let res = document.getElementById('resultado')
+            res.innerHTML = `<p>${horas} : ${minutos} : ${segundos}</p>`
+        }
+     
+    </script>
+</body>
+</html>
