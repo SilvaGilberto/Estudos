@@ -1,17 +1,12 @@
 //inconpleto
 
 function gerar() {
-    let valores = [document.getElementById('fIni'), document.getElementById('fFim')]
+    let valor = document.getElementById('fFim')
     let res = document.getElementById('resultado')
-    res.innerHTML += `<p>Irá ser sorteado um número entre ${valores[0].value} e ${valores[1].value}</p>`
-    let dif = valores[1].value - valores[0].value
+    res.innerHTML += `<p>Irá ser sorteado um número entre 1 e ${valor.value}</p>`
+    let aleatorio = Math.floor(Math.random() * valor.value + 1)
 
-    //O erro está nestas duas linhas de cdigo
-    let aleatorio = Math.random()
-    let num = valores[0].value + Math.trunc(dif * aleatorio)
-    //
-
-    res.innerHTML += `<p>O número sorteado foi <mark>${num}</mark></p>`
+    res.innerHTML += `<p>O número sorteado foi <mark>${aleatorio}</mark></p>`
 }
 
 function limpar() { // Essa é a funcionalidade do outro botão, pra limpar tudo
